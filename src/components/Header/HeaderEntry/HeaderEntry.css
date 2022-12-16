@@ -1,0 +1,28 @@
+.header__button {
+  border: 0;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.header__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.header__button_register {
+  padding: 0;
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.header__button_enter {
+  padding: 8px 20px;
+  background: #3456f3;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
