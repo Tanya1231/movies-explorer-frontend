@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 
 const Navigation = ({ location }) => {
@@ -30,12 +30,12 @@ const Navigation = ({ location }) => {
                     Главная
                   </Link>
                   <div className="navigation__movies">
-                    <NavLink
+                    <Link
                       to="/movies"
                       className="navigation__menu navigation__menu-right"
                     >
                       Фильмы
-                    </NavLink>
+                    </Link>
                     <Link
                       to="/saved-movies"
                       className="navigation__menu navigation__menu-right navigation__menu-font-weight"
