@@ -1,8 +1,8 @@
-import SearchForm from "../SavedMovies/SavedMovies";
+import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-const SavedMovies = ({ location }) => {
+function SavedMovies ({ location })  {
   return (
     <section className="movies-saved">
       <div className="movies-saved__container">
