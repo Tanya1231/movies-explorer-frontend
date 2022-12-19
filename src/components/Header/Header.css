@@ -31,12 +31,12 @@
   }
 }
 
-.header__logo {
+.header-logo {
   min-width: 38px;
   min-height: 38px;
 }
 
-.header__logo:hover {
+.header-logo:hover {
   opacity: 0.6;
   cursor: pointer;
 }

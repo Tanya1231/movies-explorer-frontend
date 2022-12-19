@@ -12,15 +12,12 @@ const Navigation = ({ location }) => {
       {location.pathname === "/" ? null : (
         <div>
           <section
-            className={`navigation__menu-container ${
+            className={`navigation-menu-container ${
               openMenu ? "navigation__menu-container_open" : ""
             }`}
           >
-            <div className="navigation__container">
-              <button
-                className="navigation__close"
-                onClick={handleToggleMenu}
-              />
+            <div className="navigation-container">
+              <button className="navigation-close" onClick={handleToggleMenu} />
               <nav className="navigation">
                 <div className="navigation__position">
                   <Link
@@ -55,7 +52,7 @@ const Navigation = ({ location }) => {
             </div>
           </section>
           <button
-            className="navigation__menu-burger"
+            className="navigation-menu-burger"
             type="button"
             onClick={handleToggleMenu}
           />

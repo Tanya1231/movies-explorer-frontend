@@ -1,22 +1,37 @@
 .form-auth {
   box-sizing: border-box;
   max-width: 396px;
-  min-height: 800px;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 70px 0 0;
+  min-height: 1300;
 }
 
 @media screen and (max-width: 1279px) {
   .form-auth {
-    max-width: 260px;
-    min-height: 780px;
-    padding: 56px 0 30px;
+    padding: 56px 0 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form-auth {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-auth {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-logo-auth {
+    margin-left: 40%;
   }
 }
 
 .form {
   width: 100%;
-  min-height: 450px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -25,7 +40,6 @@
 
 @media screen and (max-width: 1279px) {
   .form {
-    min-height: 577px;
     margin-top: 50px;
   }
 }
@@ -36,6 +50,13 @@
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+}
+
+@media screen and (max-width: 400px) {
+  .form__title {
+    text-align: center;
+    white-space: nowrap;
+  }
 }
 
 .form__input-container {
@@ -74,20 +95,18 @@
   }
 }
 
-
-.form__span {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.form-auth__span {
+  margin: 0;
+  padding: 0;
 }
 
 .form__sign {
-  width: fit-content;
+  text-align: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  text-align: center;
   color: #a0a0a0;
+  padding-bottom: 70px;
 }
 
 .form__sign a {
@@ -114,6 +133,12 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .form__sign {
+    padding-bottom: 30px;
+  }
+}
+
 .form__label {
   display: block;
   margin-bottom: 10px;
@@ -126,18 +151,18 @@
 .form__input {
   width: 100%;
   height: 46px;
-  padding: 0 0 0 15px;
   margin-bottom: 20px;
   background: #f4f4f4;
+  text-align: 10px;
   border-radius: 8px;
   border: none;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
+  padding-left: 15px;
 }
 
 .form__input:last-of-type {
   margin-bottom: 10px;
 }
-

@@ -7,8 +7,9 @@ const SearchForm = () => {
         <div className="search__input-container">
           <input
             type="text"
+            id="search"
             className="search__input"
-            placeholder="	&#128269; Фильм"
+            placeholder="Фильм"
             required
             minLength="2"
           ></input>

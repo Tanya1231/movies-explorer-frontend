@@ -12,14 +12,14 @@ const Header = ({ location, currentWidth }) => {
         {currentWidth > 2500 ? (
           <>
             <Link to="/">
-              <img src={logo} className="header__logo" alt="логотип" />
+              <img src={logo} className="header-logo" alt="логотип" />
             </Link>
             <HeaderEntry location={location} currentWidth={currentWidth} />
           </>
         ) : (
           <>
             <Link to="/">
-              <img src={logo} className="header__logo" alt="логотип" />
+              <img src={logo} className="header-logo" alt="логотип" />
             </Link>
             <HeaderEntry location={location} currentWidth={currentWidth} />
             <Navigation location={location} currentWidth={currentWidth} />
