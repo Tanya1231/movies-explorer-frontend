@@ -1,0 +1,32 @@
+.promo {
+  background-color: #dddee3;
+}
+
+.promo__container {
+  max-width: 1280px;
+  height: 524px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-image: url("../../../images/promo.svg");
+  background-position: top 82px center;
+  background-repeat: no-repeat;
+}
+
+.promo__heading {
+  color: #000;
+  max-width: 730px;
+  margin: 160px 0 0;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (max-width: 400px) {
+  .promo__heading {
+    font-size: 31px;
+    line-height: 39px;
+  }
+}

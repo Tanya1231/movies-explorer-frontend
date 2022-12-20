@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  background: #dddee3;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 18px 0;
+}
+
+.header_color {
+  background: #fafafa;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    padding: 0 14px;
+  }
+}
+
+.header-logo {
+  min-width: 38px;
+  min-height: 38px;
+}
+
+.header-logo:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
