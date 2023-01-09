@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/header__logo.svg";
 
 const Form = ({
+  onSubmit,
+  isValid,
   titleText,
   buttonText,
   children,
@@ -9,6 +11,7 @@ const Form = ({
   linkTo,
   linkText,
 }) => {
+  const location = useLocation();
   return (
     <div className="form-auth">
       <Link to="/">
@@ -18,10 +21,18 @@ const Form = ({
           alt="логотип"
         />
       </Link>
-      <form className="form">
+      <form className="form" onSubmit={onSubmit}>
         <h2 className="form__title">{titleText}</h2>
         <div className="form__input-container">{children}</div>
-        <button className="form__button">{buttonText}</button>
+        <button
+          type="submit"
+          disabled={!isValid}
+          className={`form__button ${
+            location.pathname === "/signin" && "form__button_type_login"
+          } ${!isValid && "form__button_disabled"}`}
+        >
+          {buttonText}
+        </button>
       </form>
       <div className="form form-auth__span">
         <span className="form__sign">

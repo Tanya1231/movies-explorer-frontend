@@ -23,6 +23,10 @@
   line-height: 18px;
   color: #000000;
   margin: 16px 0 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 240px;
 }
 
 .movies__card-info {
@@ -69,7 +73,7 @@
 }
 
 .movies-card__like_active {
-  background-image: url("../../../images/movieslikesactive.svg");
+  background-image: url("../../../images/likeactive.svg");
   width: 30px;
   height: 30px;
   border: none;

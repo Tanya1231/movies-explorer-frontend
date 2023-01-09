@@ -95,6 +95,19 @@
   }
 }
 
+.form__button_disabled {
+  background: #f4f4f4;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.form__button_disabled:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .form-auth__span {
   margin: 0;
   padding: 0;
@@ -151,7 +164,7 @@
 .form__input {
   width: 100%;
   height: 46px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: #f4f4f4;
   text-align: 10px;
   border-radius: 8px;
@@ -163,6 +176,9 @@
   padding-left: 15px;
 }
 
-.form__input:last-of-type {
-  margin-bottom: 10px;
+.form__error {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
 }
