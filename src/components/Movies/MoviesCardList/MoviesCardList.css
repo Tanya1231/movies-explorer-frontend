@@ -1,5 +1,4 @@
 .movies-card-list {
-  max-height: 1300px;
   padding: 70px 0 10px;
   display: grid;
   justify-content: center;
@@ -52,11 +51,5 @@
   align-items: center;
   text-align: center;
   color: #000000;
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .more-button {
-    display: block;
-  }
+  display: block;
 }

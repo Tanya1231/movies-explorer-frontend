@@ -1,3 +1,11 @@
-.movies-saved {
-  height: 100vw;
+.movies__nothing-found {
+  margin-left: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .movies__nothing-found {
+    position: absolute;
+    top: 25%;
+    font-size: 11px;
+  }
 }

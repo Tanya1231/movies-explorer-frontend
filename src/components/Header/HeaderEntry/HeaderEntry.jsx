@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const HeaderEntry = ({ location }) => {
+const HeaderEntry = ({ loggedIn }) => {
   return (
     <>
-      {location.pathname === "/" && (
+      {!loggedIn && (
         <section className="header__entry">
           <Link to="/signup" className="header__button header__button_register">
             Регистрация

@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
 
-const Navigation = ({ location }) => {
-  const [openMenu, setOpenMenu] = React.useState(false);
+const Navigation = ({ loggedIn }) => {
+  const [openMenu, setOpenMenu] = useState(false);
 
   const handleToggleMenu = () => {
     setOpenMenu(!openMenu);
   };
   return (
     <>
-      {location.pathname === "/" ? null : (
+      {loggedIn && (
         <div>
           <section
             className={`navigation-menu-container ${
