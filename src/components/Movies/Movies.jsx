@@ -149,7 +149,7 @@ function Movies({
                 <>
                   {shortFilteredMovies.length >
                     shortFilteredMovies.slice(0, numberCardsToRender).length &&
-                  shortFilteredMovies.length >= cardsToRender ? (
+                  shortFilteredMovies.length > cardsToRender ? (
                     <div className="more-container">
                       <button
                         className="more-button"
@@ -164,7 +164,7 @@ function Movies({
                 <>
                   {filteredMovies.length >
                     filteredMovies.slice(0, numberCardsToRender).length &&
-                  filteredMovies.length >= cardsToRender ? (
+                  filteredMovies.length > cardsToRender ? (
                     <div className="more-container">
                       <button
                         className="more-button"
