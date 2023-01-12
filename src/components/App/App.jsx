@@ -178,7 +178,7 @@ function App() {
       .then(() => {
         setCurrentUser("");
         setIsLoggedIn(false);
-        navigate("/signin");
+        navigate("/");
         localStorage.clear();
       })
       .catch(err => {
