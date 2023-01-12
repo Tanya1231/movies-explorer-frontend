@@ -252,14 +252,18 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route
-                path="/signup"
-                element={<Register onRegister={handleRegisterSubmit} />}
-              ></Route>
-              <Route
-                path="/signin"
-                element={<Login onLogin={handleLoginSubmit} />}
-              ></Route>
+              {!isloggedIn && (
+                <>
+                  <Route
+                    path="/signup"
+                    element={<Register onRegister={handleRegisterSubmit} />}
+                  ></Route>
+                  <Route
+                    path="/signin"
+                    element={<Login onLogin={handleLoginSubmit} />}
+                  ></Route>
+                </>
+              )}
               <Route path="*" element={<PageNotFound />}></Route>
             </Routes>
             {["/", "/movies", "/saved-movies"].includes(location.pathname) ? (
