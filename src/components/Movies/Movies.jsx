@@ -70,7 +70,7 @@ function Movies({
         localStorage.setItem("filteredMovies", JSON.stringify(result));
         localStorage.removeItem("shortFilteredMovies");
       }
-      localStorage.setItem("checkboxStatus", JSON.stringify(isCheckboxChecked));
+      localStorage.setItem("checkboxStatus", false);
     });
     setIsSearchHandled(true);
   };
