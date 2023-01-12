@@ -3,13 +3,12 @@ import { useFormWithValidation } from "../useFormWithValidation/useFormWithValid
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { useState } from "react";
 
-const Profile = ({ loggedIn, onExit, onEditProfile }) => {
+const Profile = ({ loggedIn, onExit, onEditProfile, isSuccess }) => {
   const { name, email } = useContext(CurrentUserContext);
   const {
     values,
     errors,
     isValid,
-    isUserChecked,
     handleChange,
     resetForm,
   } = useFormWithValidation({ name, email });
@@ -94,10 +93,10 @@ const Profile = ({ loggedIn, onExit, onEditProfile }) => {
             <span className="form__error">{errors.email}</span>
           </div>
           <div className="profile__buttons">
-            {!isUserChecked ? (
+            {isSuccess ? (
               <span className="profile__error">{success}</span>
             ) : null}
-            {isUserChecked ? (
+            {!isSuccess ? (
               <span className="profile__error">{error}</span>
             ) : null}
             {isValid && isInfoChanged ? (

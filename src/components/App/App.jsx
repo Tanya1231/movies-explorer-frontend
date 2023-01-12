@@ -27,6 +27,7 @@ function App() {
   const [numberCardsToRender, setNumberCardsToRender] = useState(0);
   const [numberCardsToAdd, setNumberCardsToAdd] = useState(0);
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -189,10 +190,12 @@ function App() {
   const handleUpdateUserInfo = user => {
     MainApi.editUserData(user)
       .then(data => {
+        setIsSuccess(true);
         setCurrentUser(data);
       })
       .catch(err => {
         console.log(err);
+        setIsSuccess(false);
       });
   };
 
@@ -247,7 +250,7 @@ function App() {
                       loggedIn={isloggedIn}
                       onExit={handleSignOut}
                       onEditProfile={handleUpdateUserInfo}
-                      isUserChecked={isUserChecked}
+                      isSuccess={isSuccess}
                     />
                   </ProtectedRoute>
                 }
