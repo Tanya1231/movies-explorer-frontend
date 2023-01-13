@@ -15,6 +15,7 @@ import * as MainApi from "../../utils/MainApi";
 import * as MoviesApi from "../../utils/MoviesApi";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Preloader from "../Preloader/Preloader";
+import InfoTooltip from "../InfoTooltip/InfoTooltip";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -28,6 +29,7 @@ function App() {
   const [numberCardsToAdd, setNumberCardsToAdd] = useState(0);
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isInfoTooltipPopupOpen, setIsInfoTooltipPopupOpen] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -155,9 +157,13 @@ function App() {
       .then(res => {
         setIsLoggedIn(true);
         handleLoginSubmit(email, password);
+        setIsSuccess(true);
+        setIsInfoTooltipPopupOpen(true);
         navigate("/signin");
       })
       .catch(err => {
+        setIsSuccess(false);
+        setIsInfoTooltipPopupOpen(true);
         console.log(`Ошибка регистрации ${err}`);
       });
   }
@@ -171,6 +177,8 @@ function App() {
       .catch(err => {
         console.log(err);
         setIsLoggedIn(false);
+        setIsSuccess(false);
+        setIsInfoTooltipPopupOpen(true);
       });
   }
 
@@ -197,6 +205,10 @@ function App() {
         console.log(err);
         setIsSuccess(false);
       });
+  };
+
+  const closeAllPopups = () => {
+    setIsInfoTooltipPopupOpen(false);
   };
 
   return (
@@ -272,6 +284,11 @@ function App() {
             {["/", "/movies", "/saved-movies"].includes(location.pathname) ? (
               <Footer />
             ) : null}
+            <InfoTooltip
+              isOpen={isInfoTooltipPopupOpen}
+              isSuccess={isSuccess}
+              onClose={closeAllPopups}
+            />
           </>
         ) : (
           <Preloader />
