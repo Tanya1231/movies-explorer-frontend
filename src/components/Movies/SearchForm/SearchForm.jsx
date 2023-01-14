@@ -17,8 +17,8 @@ const SearchForm = ({ isCheckboxChecked, onCheckboxChange, onSearch }) => {
   };
 
   const handleCheckboxChange = () => {
-    localStorage.setItem("checkboxStatus", JSON.stringify(!isCheckboxChecked));
     onCheckboxChange();
+    localStorage.setItem("checkboxStatus", JSON.stringify(!isCheckboxChecked));
   };
 
   const handleSubmit = event => {
