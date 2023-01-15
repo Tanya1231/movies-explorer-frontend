@@ -155,7 +155,6 @@ function App() {
   function handleRegisterSubmit(name, email, password) {
     MainApi.register(name, email, password)
       .then(res => {
-        setIsLoggedIn(true);
         handleLoginSubmit(email, password);
         setIsSuccess(true);
         setIsInfoTooltipPopupOpen(true);
@@ -185,7 +184,7 @@ function App() {
   const handleSignOut = () => {
     MainApi.logoff()
       .then(() => {
-        setCurrentUser("");
+        setCurrentUser({});
         setIsLoggedIn(false);
         navigate("/");
         localStorage.clear();
@@ -198,8 +197,8 @@ function App() {
   const handleUpdateUserInfo = user => {
     MainApi.editUserData(user)
       .then(data => {
-        setIsSuccess(true);
         setCurrentUser(data);
+        setIsSuccess(true);
       })
       .catch(err => {
         console.log(err);
