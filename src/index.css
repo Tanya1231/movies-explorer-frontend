@@ -44,6 +44,9 @@
 
 @import url(../src/components/Main/Main.css);
 
+@import url(../src/components/Preloader/Preloader.css);
+
+@import url(../src/components/InfoTooltip/InfoTooltip.css);
 
 
 
